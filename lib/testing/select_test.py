@@ -14,11 +14,11 @@ connection = sqlite3.connect(":memory:")
 
 cursor = connection.cursor()
 
-create_file = open("lib/create.sql")
+create_file = open("../lib/create.sql")
 create_as_string = create_file.read()
 cursor.executescript(create_as_string)
 
-insert_file = open("lib/seed.sql")
+insert_file = open("../lib/seed.sql")
 insert_as_string = insert_file.read()
 cursor.executescript(insert_as_string)
 
